@@ -7,6 +7,8 @@ export const api = axios.create({
 })
 
 //para todas requisições estou autenticada durante 24 hras
-export const setAuthToken = (token : string | undefined) => {
-    api.defaults.headers.common["Authorization"] = token ? `Bearer ${token}`: token;
+export const setAuthToken = (token: string | undefined) => {
+    api.defaults.headers.common["Authorization"] = token !== undefined && token !== ""
+        ? `Bearer ${token}`//padrão de autenticação a ser seguido
+        : undefined;
 }
