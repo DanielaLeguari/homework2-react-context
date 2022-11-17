@@ -31,8 +31,8 @@ export const AuthUserProvider = ({ children }: IChildren) => {
     }
 
     //login
-
     const login = async (user: IUserLogin) => {
+        nprogress.start();
         try {
             const { data } = await api.post("/auth", user);
             setToken(data);
@@ -43,6 +43,7 @@ export const AuthUserProvider = ({ children }: IChildren) => {
             console.log(error);
             toast.error("Houve algum erro, tente novamente!", toastConfig);
         }
+        nProgress.done();
     }
 
     //logout
