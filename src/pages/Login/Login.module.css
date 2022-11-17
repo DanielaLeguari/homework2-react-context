@@ -1,13 +1,27 @@
-.containerFormLogin {
+main {
+    display: grid;
+    grid-template-columns: 40% 60%;
+    grid-template-areas:
+        "containerFormLogin containerPageLogin containerPageLogin ";
+}
+
+.containerPageLogin {
+    grid-area: containerPageLogin;
+    background-color: transparent;
     height: 100vh;
-    width: 40%;
-    display: flex;
-    /* margin: 0 auto; */
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    margin: 0 auto;
+}
+
+.containerFormLogin {
+    grid-area: containerFormLogin;
+    height: 100vh;
     background-color: var(--cor-menu-login);
-    position: fixed;
+}
+
+.containerImagem {
+    display: flex;
+    align-items: center;
+    height: 100vh;
 }
 
 .formLogin {
@@ -16,6 +30,7 @@
     align-items: center;
     justify-content: center;
     width: 90%;
+    height: 100vh;
     margin: 0 auto;
 }
 
@@ -32,15 +47,16 @@ input:focus {
     border: 2px solid #403f3f;
 }
 
-.formLogin label{
-    color:var(--cor-fonte-login) ;
+.formLogin label {
+    color: var(--cor-fonte-login);
     font-weight: bold;
     font-size: 1.2rem;
     padding: 0.5rem;
 }
-.btnEntrar{
+
+.btnEntrar {
     background-color: var(--cor-fonte-login);
-    color:var(--cor-menu-login);
+    color: var(--cor-menu-login);
     margin-top: 1.5rem;
     margin-bottom: 1rem;
     font-size: 1rem;
@@ -49,10 +65,16 @@ input:focus {
     cursor: pointer;
 }
 
-.btnEntrar:hover{
-background-color:#4c7cac ;
+.btnEntrar:hover {
+    background-color: #4c7cac;
 }
-.containerAcoes{
+
+.containerAcoes {
     width: 50%;
     /* margin: 0 auto; */
+}
+
+.imagemLogin {
+    width: 600px;
+    height: 500px;
 }

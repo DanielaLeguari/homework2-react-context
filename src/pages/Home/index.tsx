@@ -1,6 +1,6 @@
-import React from 'react';
 import { AuthUserContext } from '../../context/AuthUserContext';
 import { useContext } from 'react';
+import styles from './Home.module.css';
 
 const Home = () => {
 
@@ -10,9 +10,19 @@ const Home = () => {
     logout();
   }
   return (
-    <div>
-      <button onClick={logoutApp}>Sair</button>
-    </div>
+    <main className={styles.containerHome}>
+      <header className={styles.containerHeaderHome}>
+        <div>
+          <button
+            onClick={logoutApp}>
+            Sair
+          </button>
+        </div>
+      </header>
+      <body>
+        Bem-vindo!
+      </body>
+    </main >
   );
 }
 
