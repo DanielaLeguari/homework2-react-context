@@ -41,6 +41,7 @@ main {
     border-radius: 10px;
     outline: none !important;
     background-color: var(--cor-fonte-login);
+   
 }
 
 input:focus {
@@ -63,6 +64,7 @@ input:focus {
     text-transform: uppercase;
     font-weight: bold;
     cursor: pointer;
+ 
 }
 
 .btnEntrar:hover {
@@ -71,6 +73,10 @@ input:focus {
 
 .containerAcoes {
     width: 50%;
+    display: flex;
+    justify-content: center;
+    /* align-items: center;
+    text-align: center; */
     /* margin: 0 auto; */
 }
 
