@@ -1,0 +1,29 @@
+.containerFormLogin {
+    height: 100vh;
+    width: 40%;
+    display: flex;
+    /* margin: 0 auto; */
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: red;
+    position: fixed;
+}
+
+.formLogin {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.formLogin input {
+    width: 100%;
+    padding: 0.4rem;
+    border: none;
+    border-radius: 10px;
+    
+
+}
